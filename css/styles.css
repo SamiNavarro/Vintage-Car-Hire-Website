@@ -131,7 +131,7 @@ nav {
 /* header styles */
 
 .background-img {
-    background-image: url(./images/william-krause-background-img.png);
+    background-image: url(images/william-krause-background-img.png);
     min-height: 92vh;
     background-position: center;
     background-repeat: no-repeat;
