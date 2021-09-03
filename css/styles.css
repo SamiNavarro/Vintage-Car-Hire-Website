@@ -2,23 +2,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap");
 
 :root {
-    --clr-primary-200:  rgba(254, 249, 229);
-    --clr-primary-300:  rgba(228, 215, 216);
-    --clr-primary-400: rgb(112, 94, 96); 
+  --clr-primary-200: rgba(254, 249, 229);
+  --clr-primary-300: rgba(228, 215, 216);
+  --clr-primary-400: rgb(112, 94, 96);
 
+  --clr-neutral-100: rgba(245, 236, 226);
+  --clr-neutral-600: rgba(161, 112, 55);
 
-    --clr-neutral-100: rgba(245, 236, 226); 
-    --clr-neutral-600: rgba(161, 112, 55); 
-
-    --ff-primary: 'Cairo', sans-serif;
-    --ff-accent: 'Moserrat', serif;
-}    
+  --ff-primary: "Cairo", sans-serif;
+  --ff-accent: "Moserrat", serif;
+}
 
 /* CSS reset */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body,
@@ -26,446 +25,422 @@ h1,
 h2,
 h3,
 p {
-    margin: 0;
+  margin: 0;
 }
 
 body {
-    font-family: var(--ff-primary);
-    font-weight: 400;
-    font-size: 1.3rem;
-    line-height: 1.6;
-    
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.6;
 }
 
 /* Navigation bar and burger */
 
 nav {
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    background-color: var(--clr-primary-200);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--clr-primary-200);
 }
 
 .nav-links {
-    display: flex;
-    justify-content: space-between;
-    width: 30%;
-    
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
 }
 
 .nav-links a {
-    text-decoration: none;
-    font-size: 0.8em;
-    color: var(--clr-primary-400);
+  text-decoration: none;
+  font-size: 0.8em;
+  color: var(--clr-primary-400);
 }
 
 .nav-links li {
-    list-style: none;
+  list-style: none;
+}
+
+a:hover {
+  color: coral;
 }
 
 .burger div {
-    width: 25px;
-    height: 3px;
-    background-color: var(--clr-primary-400);
-    margin: 5px;
+  width: 25px;
+  height: 3px;
+  background-color: var(--clr-primary-400);
+  margin: 5px;
 }
 
 .burger {
-    display: none;
+  display: none;
 }
 
 /* Nav bar media queries  */
 
-
 @media screen and (max-width: 64em) {
-    .nav-links {
-        width: 40%;
-    }
+  .nav-links {
+    width: 40%;
+  }
 }
 @media screen and (max-width: 48em) {
-    body {
-        overflow-x: hidden;
-    }
+  body {
+    overflow-x: hidden;
+  }
 
-    nav {
-        height: 60px;
-    }
-    .nav-links {
-        position: absolute;
-        right: 0px;
-        height: 92vh;
-        top:30px;
-        padding-top: 200px;
-        padding-bottom: 200px;
-        background-color: var(--clr-primary-200);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in-out;
-    }
-    .nav-links li {
-        opacity: 1;
-    }
-    .burger {
-        display: block;
-        cursor: pointer;
-    }
+  nav {
+    height: 60px;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 30px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: var(--clr-primary-200);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+  }
+  .nav-links li {
+    opacity: 1;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
 }
 
 .nav-active {
-    transform: translateX(0%);
-    position: absolute;
-    z-index: 1;
-    
+  transform: translateX(0%);
+  position: absolute;
+  z-index: 1;
 }
 
-
 @media screen and (max-width: 48em) {
-    .logo img {
-        padding: 15.2px;
-    }
+  .logo img {
+    padding: 15.2px;
+  }
 }
 
 /* header styles */
 
 .background-img {
-    background-image: url(../images/william-krause-background-img.png);
-    min-height: 92vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-top: 0;
-    background-size: contain;
-    background-size: cover;
-    
+  background-image: url(../images/william-krause-background-img.png);
+  min-height: 92vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 0;
+  background-size: contain;
+  background-size: cover;
 }
 
 .header-title {
-    width: fit-content;
-    margin: auto;
-    text-align: center;
-    padding-top: 17%;
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+  padding-top: 17%;
 }
 
 /* Car selection section */
 
 .title-cars {
-    text-align: center;
-    padding-bottom: 20px;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .cars-selection {
-    background-color: var(--clr-primary-200);
-    padding: 50px 0;
+  background-color: var(--clr-primary-200);
+  padding: 50px 0;
 }
 
 .cars-container {
-    background-color: #354859;
-    width: 90%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 30px 0;
-    font-size: 0.9rem;
-    border-radius: 5px;
-    margin-bottom: 50px;
+  background-color: #354859;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 30px 0;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  margin-bottom: 50px;
 }
 
 .cars-card {
-    background-color: whitesmoke;
-    flex: 25%;
-    max-width: 22%;
-    padding-bottom: 20px;
-    border-radius: 25px;
-
+  background-color: whitesmoke;
+  flex: 25%;
+  max-width: 22%;
+  padding-bottom: 20px;
+  border-radius: 25px;
 }
 
 .cars-card img {
-    width: 100%;
-    margin: auto;
-    
+  width: 100%;
+  margin: auto;
 }
 
 .single-card {
-    padding: 0 30px;
+  padding: 0 30px;
 }
 
 .single-card p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 925px) {
-    
-    .cars-card {
-      flex: 50%;
-      max-width: 42%;
-      margin-bottom: 20px;
-    }
-  
+  .cars-card {
+    flex: 50%;
+    max-width: 42%;
+    margin-bottom: 20px;
+  }
 }
 
 @media only screen and (max-width: 625px) {
-    
-    .cars-card {
-      flex: 100%;
-      max-width: 100%;
-    }
+  .cars-card {
+    flex: 100%;
+    max-width: 100%;
+  }
 
-    .cars-container {
-        background-color: transparent;
-    }
-  
+  .cars-container {
+    background-color: transparent;
+  }
 }
 
 /* Contact Form Section */
 
 .contact-form {
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    margin: auto;
-    justify-content: space-around;
-    margin-top: 50px;
-    
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  justify-content: space-around;
+  margin-top: 50px;
 }
 
-
 .info-container {
-    background-color: gainsboro;
-    flex: 25%;
-    max-width: 40%;
-    padding: 5%;
-    border-radius: 10px;
-    text-align: center;
+  background-color: gainsboro;
+  flex: 25%;
+  max-width: 40%;
+  padding: 5%;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .form-container {
-    flex: 25%;
-    max-width: 40%;
+  flex: 25%;
+  max-width: 40%;
 }
 
 @media only screen and (max-width: 625px) {
-    
-    .info-container {
-        flex: 100%;
-        max-width: 100%;
-        margin-bottom: 10px;
-    }
+  .info-container {
+    flex: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
 
-    .form-container {
-        flex: 100%;
-        max-width: 100%;
-    }
-  
+  .form-container {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 
 form {
-    width: 90%;
-    margin: auto;
-    padding: 20px 5px;
-    font-size: 0.8rem;
+  width: 90%;
+  margin: auto;
+  padding: 20px 5px;
+  font-size: 0.8rem;
 }
-  
+
 fieldset {
-    width: 100%;
-    margin: auto;
-    border: none;
-    padding: 0.4rem;
-    margin-top: 0;
+  width: 100%;
+  margin: auto;
+  border: none;
+  padding: 0.4rem;
+  margin-top: 0;
 }
-  
-  
+
 .btn {
-    width: 100%;
+  width: 100%;
 }
 .btn-form {
-    float: right;
-    margin-top: 10px;
-    padding: 0.4rem 1.5rem;
-    border: 2px solid #fafafa;
-    font-size: 0.85rem;
-    border-radius: 25px;
-    outline: none;
-    cursor: pointer;
-    transition: 0.3s;
-    margin: 0;
+  float: right;
+  margin-top: 10px;
+  padding: 0.4rem 1.5rem;
+  border: 2px solid #fafafa;
+  font-size: 0.85rem;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0;
 }
-  
-.btn-form:hover {
-    background-color: transparent;
-    color: #fff;
-}
-  
-.form-container {
-    width: 30%;
-    background-color: #8f9eab;
-    border-radius: 10px;
-    box-shadow: 0 0 20px 1px rgb(0, 0, 0, 0.1);
-}
-  
-.form-title {
-    width: 100%;
-    margin: auto;
-    text-align: center;
-}
-  
-.input {
-    font-family: inherit;
-    font-size: 0.8em;
-    width: 100%;
-    outline: none;
-    border: 2px solid #fafafa;
-    padding: 0.5rem 1rem;
-    letter-spacing: 0.5px;
-    border-radius: 25px;
-}
-  
-textarea {
-    padding: 0;
-    margin: 0;
-}
-  
-textarea.input {
-    font-family: inherit;
-    font-size: 0.8em;
-    padding: 0.8rem 1.2rem;
-    min-height: 50px;
-    max-height: 80px;
-    border-radius: 23px;
-    resize: none;
-    overflow-y: auto;
-}
-  
-label {
-    display: block;
-    padding-bottom: 2px;
-    margin-left: 10px;
-}
-  
 
+.btn-form:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+.form-container {
+  width: 30%;
+  background-color: #8f9eab;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 1px rgb(0, 0, 0, 0.1);
+}
+
+.form-title {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.input {
+  font-family: inherit;
+  font-size: 0.8em;
+  width: 100%;
+  outline: none;
+  border: 2px solid #fafafa;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.5px;
+  border-radius: 25px;
+}
+
+textarea {
+  padding: 0;
+  margin: 0;
+}
+
+textarea.input {
+  font-family: inherit;
+  font-size: 0.8em;
+  padding: 0.8rem 1.2rem;
+  min-height: 50px;
+  max-height: 80px;
+  border-radius: 23px;
+  resize: none;
+  overflow-y: auto;
+}
+
+label {
+  display: block;
+  padding-bottom: 2px;
+  margin-left: 10px;
+}
 
 /* contact inofrmation and map */
 
 .contact-info-section {
-    background-color: gainsboro;
-    width: 90%;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding: 5%;
-    font-size: 0.9rem;
+  background-color: gainsboro;
+  width: 81%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 5%;
+  font-size: 0.9rem;
+  border-radius: 10px;
 }
 
 .contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .directions {
-    flex: 25%;
-    padding: 3%;
+  flex: 25%;
+  padding: 3%;
 }
 
 .info {
-    flex: 25%;
-    padding: 3%;
+  flex: 25%;
+  padding: 3%;
 }
 
 .info-map {
-    flex: 25%;
-    justify-content: center;
-    
+  flex: 25%;
+  justify-content: center;
 }
 
 .info-map iframe {
-    margin-top: 25px;
-    float: right;
-    padding-right: 1.4rem;
+  margin-top: 25px;
+  float: right;
+  padding-right: 1.4rem;
 }
-
-
-
 
 /* Footer styles */
 
-
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    background-color: var(--clr-primary-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: var(--clr-primary-200);
 }
 
 footer ul {
-    display: flex;
-    justify-content: center;
-    margin: auto;
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }
 
 .footer_items li {
-    list-style: none;
-    color: rgb(49, 45, 45);
-    font-size: 1rem;
-    
+  list-style: none;
+  color: rgb(49, 45, 45);
+  font-size: 1rem;
 }
 .footer_items a {
-    font-size: 1rem;
-    color: rgb(49, 45, 45);
-   
+  font-size: 1rem;
+  color: rgb(49, 45, 45);
 }
 
 .footer_items {
-    display: flex;
-    justify-content: space-around;
-    width: 65%;
+  display: flex;
+  justify-content: space-around;
+  width: 65%;
 }
 
 .icon {
-    width: 28px;
-    margin-right: 0.7rem;
-    
+  width: 28px;
+  margin-right: 0.7rem;
 }
 
 .social-media {
-    padding-inline-end: 2rem 0 0 0;
+  padding-inline-end: 2rem 0 0 0;
 }
 
 .social-media p {
-    color: #333;
+  color: #333;
 }
 
 .social-media i {
-    color: #4E4949;
+  color: #4e4949;
 }
 
 .social-icons {
-    display: flex;
-    margin-top: 0.5rem;
+  display: flex;
+  margin-top: 0.5rem;
 }
 
 .social-icons a {
-    width: 35px;
-    height: 35px;
-    border-radius: 5px;
-    background: #8f9eab;
-    color: #fff;
-    text-align: center;
-    line-height: 35px;
-    margin-right: 0.5rem;
-    transition: 0.3s;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  background: #8f9eab;
+  color: #fff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 0.5rem;
+  transition: 0.3s;
 }
 
 .social-icons a:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-
 @media (max-width: 40em) {
-    .copyright {
-        display: none;
-    }
+  .copyright {
+    display: none;
+  }
 }
